@@ -1,0 +1,627 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #2F4F4F; /* Dark Slate Gray */
+  padding: 1rem;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #F0F8FF !important; /* Alice Blue */
+}
+.nav-link {
+  color: #F0F8FF !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #FFD700 !important; /* Gold */
+}
+.mainnav{
+  width: 100vw;
+}
+
+/* Home Section Styles */
+.hero-section {
+  background-image: url('./assets/preciseFarming.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #F0F8FF;
+  padding: 120px 0;
+  text-align: center;
+  text-shadow: 1.5px 1.5px 1px black;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #556B2F; /* Dark Olive Green */
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #F0F8FF;
+}
+
+.btn-primary {
+  background-color: #6B8E23; /* Olive Drab */
+  border-color: #6B8E23;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #556B2F; /* Dark Olive Green */
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* Background Section Styles */
+.background-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  color: #F0F8FF; /* Alice Blue for text */
+  background-color: #2F4F4F; /* Dark Slate Gray for background */
+  text-align: center; /* Center heading text */
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.background-content {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 2rem; /* Space between image and text */
+  width: 100%;
+}
+
+.imgx2 {
+  width: 50%;
+  aspect-ratio: 2;
+  background: url("./assets/drought.jpg");
+  background-size: cover;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 100%; /* Adjust width as needed */
+  text-align: left; /* Align text to the left */
+}
+
+.text-content p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .background-content {
+    flex-direction: column; /* Stack image and text vertically on small screens */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .imgx2 {
+    width: 100%;
+    aspect-ratio: 2;
+    background: url("./assets/drought.jpg");
+    background-size: cover;/* Adjust height for responsive design */
+  }
+
+  .text-content {
+    max-width: 75%;
+  }
+  .text-content p {
+    font-size: 1.05rem;
+  }
+}
+
+
+/* Description Section Styles */
+#description {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 80px 20px;
+  gap:10px;
+  background-color: #FAF0E6; /* Linen */
+}
+
+#description h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #556B2F; /* Dark Olive Green */
+}
+
+#description p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+@media (max-width: 768px) {
+  #description {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  #description h2 {
+    font-size: 2rem;
+  }
+
+  #description p {
+    font-size: 1rem;
+  }
+}
+.imgx3{
+  width: 100%;
+  aspect-ratio: 2;
+  background: url("./assets/smartFarm.jpg");
+  background-size: cover;
+}
+
+/* Solution Section Styles */
+#solution {
+  padding: 80px 0;
+}
+
+#solution h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #556B2F; /* Dark Olive Green */
+}
+
+.card {
+  background-color: #FAF0E6; /* Linen */
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #333333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555555;
+}
+
+@media (max-width: 768px) {
+  #solution {
+    padding: 60px 0;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Contact Section Styles */
+#contact {
+  padding: 100px 20px;
+  background-color: #F8F9FA; /* Light Grayish Background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#contact h2 {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: #333; /* Dark Gray */
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  background-color: #FFFFFF; /* White Background */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+  margin: 10px; /* Margin to separate items on small screens */
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form .form-control {
+  border-radius: 6px;
+  border: 1px solid #CED4DA; /* Light Gray Border */
+  padding: 15px;
+  font-size: 1rem; /* Adjusted font size for readability */
+}
+
+.contact-form .form-control:focus {
+  border-color: #495057; /* Dark Gray on Focus */
+  box-shadow: 0 0 5px rgba(73, 80, 87, 0.2);
+}
+
+.contact-form .btn-primary {
+  background-color: #007BFF; /* Bootstrap Blue */
+  border-color: #007BFF;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 12px 20px;
+  font-size: 1rem; /* Adjusted font size for readability */
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #0056b3; /* Darker Blue */
+  transform: scale(1.05);
+}
+
+.contact-info img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.contact-info .quote {
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #495057; /* Dark Gray */
+  margin-top: 20px;
+  text-align: center;
+}
+.imgx {
+  width: 100%;
+  aspect-ratio: 1.5;
+  background: url("./assets/sustainable.jpg");
+  background-size: cover;
+  background-position: 0 70%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form,
+  .contact-info {
+    margin: 20px 0; /* Adjust margin for stacking layout */
+    width: 100%; /* Ensure full width on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  #contact {
+    padding: 60px 10px;
+  }
+
+  #contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form,
+  .contact-info {
+    padding: 20px;
+  }
+
+  .contact-info .quote {
+    font-size: 1.4rem;
+  }
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: #2F4F4F; /* Dark Slate Gray */
+  padding: 40px 0;
+  text-align: center;
+  color: #F0F8FF; /* Alice Blue */
+  position: relative;
+}
+
+.footer .footer-links {
+  margin-bottom: 20px;
+}
+
+.footer .footer-links a {
+  color: #F0F8FF;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-links a:hover {
+  color: #FFD700; /* Gold */
+}
+
+.footer .social-icons {
+  margin-bottom: 20px;
+}
+
+.footer .social-icons a {
+  color: #F0F8FF;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #FFD700; /* Gold */
+  transform: scale(1.2);
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+  border-top: 1px solid #556B2F; /* Dark Olive Green */
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+/* Footer Wave Shape */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: url('https://www.pngitem.com/pimgs/m/315-3151926_wave-transparent-footer-png-png-download.png') repeat-x;
+  background-size: cover;
+}
+
+/* login and signup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.switch-link {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+Nav > button{
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+/* Signup */
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 450px;
+}
+.popup-content h2{
+  font-family:cursive;
+  font-weight: 500;
+}
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 500px;
+  margin-top: 20px;
+}
+.popup-content form input{
+  display: flex;
+  width:100%;
+  height: 45px;
+  border-radius: 50px;
+  padding-left: 25px;
+}
+.popup-content form input~button {
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 50px;
+  background: rgb(76, 88, 254);
+  color: white;
+}
+.popup-content form input~button:hover{
+  background-color: rgb(60, 72, 231);
+}
+/* login */
+.popup-content .login{
+  width: 300px;
+  height: 200px;
+}
+
+/* mainpage */
+/* MainPage.css */
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.main-page h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+.main-page p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1000px;
+}
+.content {
+  width: 80vw;
+  padding: 20px;
+}
+
+/* Top Section: Weather & Sensor Data */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.weather-component,
+.sensor-readings-component {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-component h2,
+.sensor-readings-component h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.weather-component p,
+.sensor-readings-component p {
+  font-size: 20px;
+  color: #333;
+}
+
+/* Icons */
+.weather-icon {
+  font-size: 28px;
+  color: #4CAF50;
+}
+
+.sensor-icon {
+  font-size: 28px;
+  color: #4CAF50;
+}
+
+/* Bottom Section: Video Feed */
+.bottom-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-feed-component a {
+  color:#4CAF50;
+  text-decoration: none;
+}
+/* error */
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+
+/* SignOut Button */
+.main-page button {
+  color: black;
+  padding: 8px 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+  }
+
+  .weather-component,
+  .sensor-readings-component {
+    width: 100%;
+  }
+}
+.dropdown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 15px;
+  background:#4CAF50;
+}
+.dropdown:hover{
+  background-color: green;
+  cursor: pointer;
+}
