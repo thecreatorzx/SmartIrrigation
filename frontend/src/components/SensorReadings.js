@@ -1,6 +1,7 @@
 import { FaSeedling } from "react-icons/fa"; // Example icon for sensor
 import React, { useEffect, useState } from "react";
 import { IoMdArrowDropdownCircle, IoMdArrowDropupCircle } from "react-icons/io";
+import axios from "axios";
 
 const SensorReadings = () => {
   const [showMore, setShowMore] = useState(false);
@@ -12,18 +13,37 @@ const SensorReadings = () => {
     weather: "nil",
     feels: "nil",
   });
+  const [error, setError] = useState(null); // State to handle errors
+  const [loading, setLoading] = useState(true); // State to handle loading
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:5000/api/sensor-data"); // Fetch from your API
-      const result = await response.json();
-      setData(result);
+      try {
+        setLoading(true); // Set loading state before fetching
+        const response = await axios.get(
+          "http://localhost:5000/api/sensor-data"
+        ); // Fetch from your API
+        setData(response.data);
+      } catch (err) {
+        setError("Could not load sensor data. Please try again later.");
+      } finally {
+        setLoading(false); // Reset loading state
+      }
     };
 
     fetchData();
   }, []);
-  if (!data) {
+
+  if (loading) {
     return <div>Loading sensor data...</div>;
+  }
+
+  if (error) {
+    return (
+      <div className="sensor-error">
+        <p>{error}</p>
+      </div>
+    );
   }
 
   return (
@@ -33,12 +53,12 @@ const SensorReadings = () => {
       </h2>
       <p>Humidity: {data.humidity}%</p>
       <p>Temperature: {data.temperature}</p>
-      <p>Feels Like: {data.feels}%</p>
+      <p>Feels Like: {data.feels}</p>
       <p>Visibility: {data.visibility}</p>
       {showMore && (
         <>
-          <p>Weather: {data.weather}%</p>
-          <p>SoilMoisture: {data.soilMoisture}%</p>
+          <p>Weather: {data.weather}</p>
+          <p>Soil Moisture: {data.soilMoisture}%</p>
         </>
       )}
       <div className="dropdown" onClick={() => setShowMore(!showMore)}>
